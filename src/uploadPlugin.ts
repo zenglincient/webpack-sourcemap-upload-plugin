@@ -6,7 +6,8 @@ const PLUGIN_NAME = 'UploadSourceMapPlugin'
 
 export interface OptionProps {
   url: string,
-  method: 'Get' | 'Put' | 'Post'
+  method: 'Get' | 'Put' | 'Post',
+  pathName?: string
 }
 
 class UploadSourceMapPlugin {
@@ -27,6 +28,7 @@ class UploadSourceMapPlugin {
     const stream = Fs.createReadStream(filePath)
     const formData = new FormDatas()
     formData.append('file', stream)
+    formData.append('pathName', this.options.pathName || '')
     return Axios.default({
       url: this.options.url,
       method: this.options.method || 'PUT',

@@ -30,6 +30,7 @@ class UploadSourceMapPlugin {
             const stream = Fs.createReadStream(filePath);
             const formData = new FormDatas();
             formData.append('file', stream);
+            formData.append('pathName', this.options.pathName || '');
             return Axios.default({
                 url: this.options.url,
                 method: this.options.method || 'PUT',

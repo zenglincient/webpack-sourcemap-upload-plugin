@@ -1,5 +1,5 @@
 {
-  "name": "webpack-demo",
+  "name": "webpack-sourcemap-upload-plugin",
   "version": "1.0.0",
   "description": "",
   "main": "uploadPlugin.js",
