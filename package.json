@@ -1,7 +1,7 @@
 {
   "name": "webpack-sourcemap-upload-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Webpack Plugin To Upload SourceMap",
   "main": "uploadPlugin.js",
   "types": "uploadPlugin.d.ts",
   "scripts": {
@@ -9,7 +9,7 @@
     "ts": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "zenglincient",
   "license": "ISC",
   "dependencies": {
   },
