@@ -1,6 +1,25 @@
 # webpack sourceMap 上传插件 demo
 
-## 运行
+## 使用
+```bash
+npm install webpack-sourcemap-upload-plugin --save-dev
+
+```
+```js
+// webpack config
+const UploadPlugin = require('webpack-sourcemap-upload-plugin')
+
+
+plugins: [
+    new UploadPlugin({
+        url: 'http://localhost:8013/api/upload',
+        method: 'Put'
+    })
+]
+```
+
+
+## 开发
 ```bash
 npm install
 
@@ -10,7 +29,7 @@ node server.js
 # 转化js
 npm run ts
 
-# 执行打包及上传操作
+# 测试打包和上传
 npm run build
 ```
 
